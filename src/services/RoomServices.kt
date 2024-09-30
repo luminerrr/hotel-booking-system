@@ -10,6 +10,7 @@ class RoomServices {
     fun addRoom() {
 
         val id = rooms.last().id + 1
+
         println("Enter room type (Single, Double, Suite): ")
         val type = readLine() ?: return
         println("Enter rate per night: ")
