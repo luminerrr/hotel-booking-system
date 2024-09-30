@@ -8,6 +8,6 @@ class Booking(
     var customer: Customer,
     var checkInDate: LocalDate,
     var checkOutDate: LocalDate,
-    var totalPrice: Double
+    var totalPrice: Double?
 ) {
 }
