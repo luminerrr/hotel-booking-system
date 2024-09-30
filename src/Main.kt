@@ -8,7 +8,6 @@ fun main() {
     val bookings = Bookings().datas
     val rooms = Rooms().datas
     val customers = Customers().datas
-    val roomServices = RoomServices()
     val hotelService = HotelManager(bookings, customers, rooms)
 
 //    roomServices.addRoom()
@@ -17,7 +16,7 @@ fun main() {
     while (true) {
         println("Welcome to the hotel, Please select one of this menu")
         println("1. Add Room")
-        println("2. Book Book")
+        println("2. Book Room")
         println("3. Cancel Booking")
         println("4. Check Available Rooms")
         println("5. Price Calculations")
@@ -26,10 +25,10 @@ fun main() {
         val selection = readLine()?.toIntOrNull()
 
         when(selection) {
-            1 -> roomServices.addRoom()
+            1 -> hotelService.addRoom()
             2 -> {}
             3 -> {}
-            4 -> {}
+            4 -> hotelService.getAvailableRooms()
             5 -> {}
             6 -> {
                 println("Exiting ...")
