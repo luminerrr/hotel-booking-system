@@ -10,4 +10,13 @@ class Room(
     var amenities: List<String>
 ) {
 
+<<<<<<< Updated upstream
+=======
+    fun isAvailable(checkIn: LocalDate, checkOut: LocalDate): Boolean {
+        return generateSequence(checkIn) { date ->
+            date.plusDays(1).takeIf { it <= checkOut }
+        }.all { availability[it] ?: true }  // No more nullability issue
+    }
+
+>>>>>>> Stashed changes
 }
