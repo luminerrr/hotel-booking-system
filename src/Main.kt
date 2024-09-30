@@ -1,8 +1,7 @@
+import services.RoomServices
+
 fun main() {
-<<<<<<< Updated upstream
-    println("Hello World!")
-}
-=======
+
 //    println("Hello World!")
     val roomServices = RoomServices()
 
@@ -11,4 +10,3 @@ fun main() {
 //    roomServices.addRoom()
 //    roomServices.getRooms()
 }
->>>>>>> Stashed changes
