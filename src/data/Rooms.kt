@@ -21,12 +21,12 @@ class Rooms {
             LocalDate.parse("2024-10-01") to false,  // Not available
             LocalDate.parse("2024-10-02") to false,
             LocalDate.parse("2024-10-03") to false,
-            LocalDate.parse("2024-10-04") to true,
-            LocalDate.parse("2024-10-05") to true,
+            LocalDate.parse("2024-10-04") to false,
+            LocalDate.parse("2024-10-05") to false,
             LocalDate.parse("2024-10-06") to false,
-            LocalDate.parse("2024-10-07") to true,
+            LocalDate.parse("2024-10-07") to false,
             LocalDate.parse("2024-10-08") to false,
-            LocalDate.parse("2024-10-09") to true
+            LocalDate.parse("2024-10-09") to false
         )),
         Room(3, RoomType.Double.toString(), 300.00, listOf("Wi-Fi", "TV", "Bathtub"), mutableMapOf(
             LocalDate.parse("2024-10-01") to false,
@@ -72,6 +72,5 @@ class Rooms {
         ))
     )
 }
-
 
 
