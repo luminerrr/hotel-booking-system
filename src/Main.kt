@@ -1,7 +1,9 @@
 import data.Bookings
 import data.Customers
 import data.Rooms
+import feature.priceFeature
 import services.HotelManager
+import services.PriceService
 import services.RoomServices
 
 fun main() {
@@ -9,6 +11,7 @@ fun main() {
     val rooms = Rooms().datas
     val customers = Customers().datas
     val hotelService = HotelManager(bookings, customers, rooms)
+    val priceService = priceFeature(hotelService)
 
 //    roomServices.addRoom()
 //    roomServices.getRooms()
@@ -26,10 +29,10 @@ fun main() {
 
         when(selection) {
             1 -> hotelService.addRoom()
-            2 -> {}
-            3 -> {}
+            2 -> {hotelService.addBooking()}
+            3 -> {hotelService.cancelBooking()}
             4 -> hotelService.getAvailableRooms()
-            5 -> {}
+            5 -> priceService.checkPrice()
             6 -> {
                 println("Exiting ...")
                 return

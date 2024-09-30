@@ -7,11 +7,11 @@ import data.SpecialAmenitiesesData
 import java.time.temporal.ChronoUnit
 
 
-class PriceService {
+class PriceService() {
     private val customers = Customers()
     private val rooms = Rooms()
     private val specialAmenities = SpecialAmenitiesesData().datas
-    private val bookings = Bookings(customers, rooms).datas
+    private val bookings = Bookings().datas
 
     fun checkBookingId(bookingId:Int?): Boolean{
         val booking = bookings.find{it.id == bookingId}

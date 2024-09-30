@@ -3,6 +3,7 @@ package services
 import data.Bookings
 import data.Customers
 import data.Rooms
+import data.SpecialAmenitiesesData
 import model.Booking
 import model.Customer
 import model.Room
@@ -16,9 +17,10 @@ class HotelManager(
     var customers: MutableList<Customer> = Customers().datas,
     val rooms: MutableList<Room> = Rooms().datas
 ) {
-//    var bookings: MutableList<Booking> = Bookings().datas
+    //    var bookings: MutableList<Booking> = Bookings().datas
 //    var customers: MutableList<Customer> = Customers().datas
 //    private val rooms = Rooms().datas
+    private val specialAmenities = SpecialAmenitiesesData().datas
 
     fun addRoom() {
         val id = rooms.last().id + 1
@@ -81,10 +83,15 @@ class HotelManager(
     var dateUtils = DateUtils()
 
 
-    fun addBooking(
-        customerId: Int?, roomId: Int?,
-        checkInDate: String?, checkOutDate: String?
-    ) {
+    fun addBooking() {
+        println("Please input Customer ID")
+        val customerId = readLine()?.toIntOrNull()
+        println("Please input Room ID")
+        val roomId = readLine()?.toIntOrNull()
+        println("Please input check in date (mm-dd-yyyy)")
+        val checkInDate = readLine()?.toString()
+        println("Please input check out date (mm-dd-yyyy)")
+        val checkOutDate = readLine()?.toString()
         if (customerId == null || roomId == null || checkInDate == null || checkOutDate == null) {
             println("Please use valid input!")
             return
@@ -109,7 +116,7 @@ class HotelManager(
 //        Convert date
         val checkInLocal = dateUtils.fromStringToLocalDate(checkInDate)
         val checkOutLocal = dateUtils.fromStringToLocalDate(checkOutDate)
-        if (checkOutLocal.isAfter(checkInLocal)) {
+        if (checkOutLocal.isBefore(checkInLocal) || checkOutLocal.isEqual(checkInLocal)) {
             println("Check out date must be later than check in date!")
             return
         }
@@ -146,7 +153,9 @@ class HotelManager(
         }
     }
 
-    fun cancelBooking(bookingId: Int?) {
+    fun cancelBooking() {
+        println("Please input booking id")
+        val bookingId = readLine()?.toIntOrNull()
         if (bookingId == null) {
             println("Please input the right booking id format")
             return;
@@ -168,6 +177,46 @@ class HotelManager(
                 return
             }
         }
+    }
+
+    fun checkBookingId(bookingId: Int?): Boolean {
+        val booking = bookings.find { it.id == bookingId }
+        if (booking != null) {
+            return true
+        }
+        return false
+    }
+
+    fun priceTotal(bookingId: Int?) {
+        val booking = bookings.find { it.id == bookingId }
+        if (booking != null) {
+            println(booking.id)
+            println(booking.room.ratePerNight)
+            val totalDate = ChronoUnit.DAYS.between(booking.checkInDate, booking.checkOutDate)
+            println(totalDate)
+            booking.totalPrice = (booking.totalPrice ?: 0.0) + booking.room.ratePerNight * totalDate
+            if (totalDate > 7) {
+                booking.totalPrice = booking.totalPrice!! * 0.9
+            }
+            println(booking.totalPrice)
+            return;
+        } else {
+            println("booking id $bookingId not found")
+        }
+    }
+
+    fun addAmenities(bookingId: Int?, productId: Int?, productValue: Int?) {
+        val booking = bookings.find { it.id == bookingId }
+        if (booking != null) {
+            val amenities = specialAmenities.find { it.id == productId }
+            if (amenities != null) {
+                booking.totalPrice = (booking.totalPrice ?: 0.0) + (amenities.price * (productValue ?: 0))
+                return
+            }
+        } else {
+            println("booking id $bookingId not found")
+        }
+
     }
 
 

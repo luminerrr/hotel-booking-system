@@ -1,12 +1,13 @@
 package feature
 
+import services.HotelManager
 import services.PriceService
 
-class priceFeature(private val priceService: PriceService) {
+class priceFeature(private val hotelService: HotelManager) {
     fun checkPrice(){
         println("enter your booking id")
         val bookingId = readLine()?.toInt()
-        val checkBooking = priceService.checkBookingId(bookingId)
+        val checkBooking = hotelService.checkBookingId(bookingId)
         if(checkBooking) {
             println("do you have additional amenities ? y/n")
             val choice = readLine().toString()
@@ -23,13 +24,13 @@ class priceFeature(private val priceService: PriceService) {
                     }
                     println("how many ?")
                     val productValue = readLine()?.toInt()
-                    priceService.addAmenities(bookingId,choice2,productValue)
+                    hotelService.addAmenities(bookingId,choice2,productValue)
                 }
                     while (choice2 != 4)
-                    priceService.priceTotal(bookingId)
+                    hotelService.priceTotal(bookingId)
             }
             else{
-                priceService.priceTotal(bookingId)
+                hotelService.priceTotal(bookingId)
             }
         }
         else{
