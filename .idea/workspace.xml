@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92bdbcdd-aacf-47c2-9bfe-212213cf7dfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/SpecialAmenitiesesData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feature/priceFeature.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/SpecialAmenities.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/PriceService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Bookings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Bookings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Customers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Customers.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Booking.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Booking.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/HotelManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/HotelManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/RoomServices.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/RoomServices.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Data Class" />
+        <option value="Kotlin Enum" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -31,23 +25,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jaflanet"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;luminerrr&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/luminerrr/hotel-booking-system",
-    "accountId": "87d202b4-0170-4b9d-b772-2a4b59e5856f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/luminerrr/hotel-booking-system.git&quot;,
+    &quot;accountId&quot;: &quot;98b02ab2-255f-406e-b14a-f3a726db4889&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2mmPwRqSQ5B8NRduWs3HAGbdA8j" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -59,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/68762/Documents/Kotlin/hotel-booking-system"
+    "last_opened_file_path": "D:/FIFGROUP IT DEV/Materi Bootcamp/Kotlin/anansi/exercise/day-2/library-management-system-new"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -71,6 +67,19 @@
       <option name="presentableId" value="Default" />
       <updated>1727679023309</updated>
     </task>
+    <task id="LOCAL-00001" summary="init repo">
+      <option name="closed" value="true" />
+      <created>1727679146358</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727679146358</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="init repo" />
   </component>
 </project>
