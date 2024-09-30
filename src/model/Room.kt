@@ -11,6 +11,7 @@ class Room(
 ) {
     init {
         require(ratePerNight > 0) { "Rate per night must be positive" }
+        require(type in listOf("Single", "Double", "Suite")) { "Invalid room type" }
     }
 
     fun isAvailable(checkIn: LocalDate, checkOut: LocalDate): Boolean {
