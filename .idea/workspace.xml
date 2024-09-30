@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="92bdbcdd-aacf-47c2-9bfe-212213cf7dfd" name="Changes" comment="" />
+    <list default="true" id="92bdbcdd-aacf-47c2-9bfe-212213cf7dfd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/data/SpecialAmenitiesesData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/feature/priceFeature.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/SpecialAmenities.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/PriceService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Bookings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Bookings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Customers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Customers.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Booking.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Booking.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jaflanet"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/luminerrr/hotel-booking-system",
+    "accountId": "87d202b4-0170-4b9d-b772-2a4b59e5856f"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2mmPwRqSQ5B8NRduWs3HAGbdA8j" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -19,8 +55,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Kotlin.MainKt.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true"
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/68762/Documents/Kotlin/hotel-booking-system"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

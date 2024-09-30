@@ -1,3 +1,5 @@
+import services.PriceService
+
 fun main() {
-    println("Hello World!")
+
 }
