@@ -9,5 +9,11 @@ class Room(
     var availability: Map<LocalDate, Boolean>,
     var amenities: List<String>
 ) {
+    init {
+        require(ratePerNight > 0) { "Rate per night must be positive" }
+    }
 
+    fun isAvailable(checkIn: LocalDate, checkOut: LocalDate) {
+        
+    }
 }
