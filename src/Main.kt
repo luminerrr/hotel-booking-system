@@ -1,3 +1,9 @@
+import services.RoomServices
+
 fun main() {
-    println("Hello World!")
+//    println("Hello World!")
+    val roomServices = RoomServices()
+
+    roomServices.addRoom()
+    roomServices.displayRooms()
 }
