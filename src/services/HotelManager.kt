@@ -17,9 +17,6 @@ class HotelManager(
     var customers: MutableList<Customer> = Customers().datas,
     val rooms: MutableList<Room> = Rooms().datas
 ) {
-    //    var bookings: MutableList<Booking> = Bookings().datas
-//    var customers: MutableList<Customer> = Customers().datas
-//    private val rooms = Rooms().datas
     private val specialAmenities = SpecialAmenitiesesData().datas
 
     fun addRoom() {
@@ -33,6 +30,8 @@ class HotelManager(
         val amenities = readLine()?.split(",")?.map { it.trim() } ?: listOf()
 
         rooms.add(Room(id, type, ratePerNight, amenities))
+
+        println("Successfully add $type room with id $id price: $ratePerNight")
     }
 
     fun getRooms() {
@@ -144,7 +143,7 @@ class HotelManager(
                     selectedUser,
                     checkInLocal,
                     checkOutLocal,
-                    totalBookingDays * selectedRoom.ratePerNight
+                    null
                 )
                 bookings.add(newBooking)
                 println("Successfully book room $roomId from $checkInDate to $checkOutDate")
@@ -190,15 +189,24 @@ class HotelManager(
     fun priceTotal(bookingId: Int?) {
         val booking = bookings.find { it.id == bookingId }
         if (booking != null) {
-            println(booking.id)
-            println(booking.room.ratePerNight)
             val totalDate = ChronoUnit.DAYS.between(booking.checkInDate, booking.checkOutDate)
-            println(totalDate)
+            val amenitiesPrice = booking.totalPrice
             booking.totalPrice = (booking.totalPrice ?: 0.0) + booking.room.ratePerNight * totalDate
             if (totalDate > 7) {
                 booking.totalPrice = booking.totalPrice!! * 0.9
             }
-            println(booking.totalPrice)
+            println(" ")
+            println("Booking Details")
+            println("Booking ID : ${booking.id}")
+            if(amenitiesPrice != null) {
+                println("additional amities : $amenitiesPrice")
+            }
+            println("room rate times days : ${booking.room.ratePerNight} * $totalDate")
+            if (totalDate > 7) {
+               println("discount 10%")
+            }
+            println("total price : ${booking.totalPrice}")
+            println(" ")
             return;
         } else {
             println("booking id $bookingId not found")
