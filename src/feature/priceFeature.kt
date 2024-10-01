@@ -1,7 +1,6 @@
 package feature
 
 import services.HotelManager
-import services.PriceService
 
 class priceFeature(private val hotelService: HotelManager) {
     fun checkPrice(){
@@ -13,18 +12,20 @@ class priceFeature(private val hotelService: HotelManager) {
             val choice = readLine().toString()
             if (choice == "y") {
                 do {
-                    println("what is the ameties ?")
+                    println("what is the amenities ?")
                     println("1. Extra Bed")
                     println("2. Wine")
                     println("3. Snack")
-                    println("4. exit")
                     val choice2 = readLine()?.toInt()
-                    if((choice2?:0) >= 3){
-                        break
-                    }
                     println("how many ?")
                     val productValue = readLine()?.toInt()
                     hotelService.addAmenities(bookingId,choice2,productValue)
+                    println("still have amenities ?")
+                    println("1. yes")
+                    println("2. no")
+                    if((choice2?:0) >= 2){
+                        break
+                    }
                 }
                     while (choice2 != 4)
                     hotelService.priceTotal(bookingId)

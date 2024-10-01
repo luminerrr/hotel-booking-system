@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92bdbcdd-aacf-47c2-9bfe-212213cf7dfd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Bookings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Bookings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/priceFeature.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/priceFeature.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/HotelManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/HotelManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/RoomServices.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/RoomServices.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +50,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.MainKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FIFGROUP IT DEV/Materi Bootcamp/Kotlin/anansi/exercise/day-2/library-management-system-new"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/FIFGROUP IT DEV/Materi Bootcamp/Kotlin/anansi/exercise/day-2/library-management-system-new&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
