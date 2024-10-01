@@ -119,22 +119,18 @@ class HotelManager(
             println("Check out date must be later than check in date!")
             return
         }
-//        checks availability
-        for (isAvailable in selectedRoom.availability.values) {
-            if (!isAvailable) {
-                println("Sorry, room ${selectedRoom.id} isn't available")
-                return
-            }
-        }
         val totalBookingDays = ChronoUnit.DAYS.between(checkInLocal, checkOutLocal)
         val newBookId = if (bookings.size != 0) bookings.last().id + 1 else 1
-//        Add new entry
-
-
 //        Change Room availability
         for (roomIndex in rooms.indices) {
             if (rooms[roomIndex].id == roomId) {
                 for (date in dateUtils.getDatesInRange(checkInLocal, checkOutLocal)) {
+//                    checks availability
+                    val isAvailable = selectedRoom.availability[date]
+                    if(isAvailable == false) {
+                        println("Sorry, room ${selectedRoom.id} isn't available on $date")
+                        return;
+                    }
                     rooms[roomIndex].availability[date] = false
                 }
                 val newBooking = Booking(
