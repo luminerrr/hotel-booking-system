@@ -3,8 +3,6 @@ import data.Customers
 import data.Rooms
 import feature.priceFeature
 import services.HotelManager
-import services.PriceService
-import services.RoomServices
 
 fun main() {
     val bookings = Bookings().datas
@@ -12,9 +10,6 @@ fun main() {
     val customers = Customers().datas
     val hotelService = HotelManager(bookings, customers, rooms)
     val priceService = priceFeature(hotelService)
-
-//    roomServices.addRoom()
-//    roomServices.getRooms()
 
     while (true) {
         println("Welcome to the hotel, Please select one of this menu")

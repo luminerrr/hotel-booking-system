@@ -20,10 +20,11 @@ class priceFeature(private val hotelService: HotelManager) {
                     println("how many ?")
                     val productValue = readLine()?.toInt()
                     hotelService.addAmenities(bookingId,choice2,productValue)
-                    println("still have amenities ?")
+                    println("still have additional amenities ?")
                     println("1. yes")
                     println("2. no")
-                    if((choice2?:0) >= 2){
+                    val choice3 = readLine()?.toInt()
+                    if((choice3?:0) >= 2){
                         break
                     }
                 }
